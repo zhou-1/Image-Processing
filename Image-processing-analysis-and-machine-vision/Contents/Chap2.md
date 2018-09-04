@@ -6,7 +6,8 @@
 
 连续图像函数     
 亮度 brightness   
-亮度图像 intensity image - 记录了明亮度信息的2D 图像    
-2D 亮度图像 intensity image 是3D 场景的透视投影 perspective projection.       
+亮度图像 intensity image - 记录了明亮度信息的2D 图像，唯一信息是像素的亮度本身。       
+2D 亮度图像 intensity image 是3D 场景的透视投影 perspective projection. 当3D 物体经过透视投影映射到摄像机平面后，大量的信息会丢失。          
 非线性的透视投影常被近似为线性的平行（或正交投影, orthographic projection）。     
-
+目标：恢复完整的3D 表达，建立图像中点的深度depth 这个中间表达层次。    
+<b> 计算机视觉中的问题：恢复被透视投影损失的信息（几何问题），理解图像亮度 </b>  
